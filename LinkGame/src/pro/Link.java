@@ -26,7 +26,7 @@ public abstract	class Link extends JPanel implements ActionListener{
 		JButton BlockButton[][] = new JButton[8][8];//
 		JButton newgameButton = new JButton("重新开始");
 		JButton reLoadButton = new JButton("刷新");
-		JButton nextLevelButton = new JButton("下一关");
+		//JButton nextLevelButton = new JButton("下一关");
 		
 		JButton musicButton;
 		
@@ -86,14 +86,14 @@ public abstract	class Link extends JPanel implements ActionListener{
 			reLoadButton.setBounds(720, 120, 200, 30);
 			reLoadButton.setBackground(Color.white);
 			reLoadButton.setBorderPainted(true);
-			nextLevelButton.setBounds(map[0].length * 40 + 400, 350, 200, 20);
-			nextLevelButton.addActionListener(this);//
+			//nextLevelButton.setBounds(map[0].length * 40 + 400, 350, 200, 20);
+			//nextLevelButton.addActionListener(this);//
 			newgameButton.addActionListener(this);
 			reLoadButton.addActionListener(this);
 
 			this.add(newgameButton);
 			this.add(reLoadButton);
-			this.add(nextLevelButton);
+			//this.add(nextLevelButton);
 			
 			Object[] possibleValues = { "卡农(八音盒版)", "鸟之诗(八音盒版)", "天空之城(八音盒版)" }; 
 			Object selectedValue = JOptionPane.showInputDialog(null, "请选择你喜欢的BGM。", "背景音乐", 
@@ -182,7 +182,7 @@ public abstract	class Link extends JPanel implements ActionListener{
 				reLoadButton.setEnabled(true);
 				sound.stop();
 			}
-			if (e.getSource() == nextLevelButton) {
+			/*if (e.getSource() == nextLevelButton) {
 				for (int i = 0; i < 8; i++) {
 					for (int j = 0; j < 8; j++) {
 						map[i][j] = 0;
@@ -190,7 +190,8 @@ public abstract	class Link extends JPanel implements ActionListener{
 				}
 				pass();
 				reLoadButton.setEnabled(true);
-			}//测试用
+			}测试用
+			*/
 			
 			for (int i = 0; i < 8; i++) {
 				for (int j = 0; j < 8; j++) {
